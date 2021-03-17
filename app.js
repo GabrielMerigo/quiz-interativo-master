@@ -1,6 +1,6 @@
 const form = document.querySelector('.quiz-form')
-
-const correctAnswers = ['B', 'B', 'B', 'B']
+const paragraphSuccess = document.querySelector('#paragraphSuccess')
+const correctAnswers = ['A', 'C', 'C', 'B']
 
 form.addEventListener('submit', event => {
   event.preventDefault()
@@ -19,5 +19,5 @@ form.addEventListener('submit', event => {
     }
   })
 
-  console.log(`Parabéns, você acertou ${score}%`);
+  paragraphSuccess.innerHTML = `<p>Parabéns, você acertou ${score}%</p>`
 })
