@@ -19,6 +19,6 @@ form.addEventListener('submit', event => {
     }
   })
 
-  paragraphSuccess.innerHTML = `<p>Parabéns, você acertou ${score}%</p>`
+  paragraphSuccess.textContent = `Parabéns, você acertou ${score}%`
 })
 
