@@ -1,5 +1,5 @@
 const form = document.querySelector('.quiz-form')
-const paragraphSuccess = document.querySelector('#paragraphSuccess')
+const paragraphSuccess = document.querySelector('.paragraphSuccess')
 const correctAnswers = ['A', 'C', 'C', 'B']
 
 form.addEventListener('submit', event => {
@@ -14,11 +14,22 @@ form.addEventListener('submit', event => {
   ]
 
   userAnswers.forEach((userAnswer, index) => {
-    if(userAnswer === correctAnswers[index]){
+    if (userAnswer === correctAnswers[index]) {
       score += 25
     }
   })
 
-  paragraphSuccess.textContent = `Parabéns, você acertou ${score}%`
+  let counter = 0;
+
+  const timer = setInterval(() => {
+    if (counter < score) {
+      counter++
+      clearInterval(timer)
+    }
+  }, 3000)
+
+  scrollTo(0, 0)
+
+  paragraphSuccess.innerHTML = `<strong>Parabéns, você acertou ${score}%</strong>`
 })
 
