@@ -27,7 +27,6 @@ form.addEventListener('submit', event => {
   event.preventDefault()
 
   // pega as respostas do usuário
-
   const userAnswers = getUserAnswers()
 
   // Calcula pontuação do user
