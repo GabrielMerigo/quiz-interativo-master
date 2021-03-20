@@ -4,12 +4,8 @@ const correctAnswers = ['A', 'C', 'C', 'B']
 
 let score = 0
 
-const getUserAnswers = () => {
-  const userAnswers = correctAnswers.map((_, index) => {
-    return form[`inputQuestion${index + 1}`].value;
-  })
-  return userAnswers
-}
+const getUserAnswers = () => correctAnswers.map((_, index) => 
+  form[`inputQuestion${index + 1}`].value)
 
 const calculateUserScore = (userAnswers) =>
   userAnswers.forEach((userAnswer, index) => {
