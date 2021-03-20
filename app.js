@@ -8,12 +8,10 @@ const getUserAnswers = () => {
   let userAnswers = []
 
   correctAnswers.forEach((_, index) => {
-    const userAnswer = form[`inputQuestion${index + 1}`].value;
+    const questions = `inputQuestion${index + 1}`;
+    const userAnswer = form[questions].value;
     userAnswers.push(userAnswer)
   })
-
-  console.log(userAnswers);
-
   return userAnswers
 }
 
